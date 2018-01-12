@@ -28,8 +28,8 @@
 if has("cscope")
   " use both cscope and ctag for 'ctrl-]', ':ta', and 'vim -t'
   set cscopetag
-  " check ctags for definition of a symbol before checking ctags:
-  set cscopetagorder=1
+  " check cscope for definition of a symbol before checking ctags:
+  set cscopetagorder=0
   " show msg when any other cscope db added
   set cscopeverbose
 
