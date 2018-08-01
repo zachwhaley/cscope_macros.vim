@@ -27,7 +27,7 @@
 " when it was compiled.  If it wasn't, time to recompile vim...
 if has("cscope")
   " use both cscope and ctag for 'ctrl-]', ':ta', and 'vim -t'
-  set cscopetag
+  set nocscopetag
   " check cscope for definition of a symbol before checking ctags:
   set cscopetagorder=0
   " show msg when any other cscope db added
@@ -61,19 +61,19 @@ if has("cscope")
   " thing, but does a vertical split instead (vim 6 only).
   "
 
-  " To do the first type of search, hit 'CTRL-[', followed by one of the
+  " To do the first type of search, hit 'CTRL-]', followed by one of the
   " cscope search types above (s,g,c,t,e,f,i,d).  The result of your cscope
   " search will be displayed in the current window.  You can use CTRL-T to
   " go back to where you were before the search.
 
-  noremap <C-[>s :cs find s <C-R>=expand("<cword>")<CR><CR>
-  noremap <C-[>g :cs find g <C-R>=expand("<cword>")<CR><CR>
-  noremap <C-[>c :cs find c <C-R>=expand("<cword>")<CR><CR>
-  noremap <C-[>t :cs find t <C-R>=expand("<cword>")<CR><CR>
-  noremap <C-[>e :cs find e <C-R>=expand("<cword>")<CR><CR>
-  noremap <C-[>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
-  noremap <C-[>i :cs find i <C-R>=expand("<cfile>")<CR><CR>
-  noremap <C-[>d :cs find d <C-R>=expand("<cword>")<CR><CR>
+  noremap <C-]>s :cs find s <C-R>=expand("<cword>")<CR><CR>
+  noremap <C-]>g :cs find g <C-R>=expand("<cword>")<CR><CR>
+  noremap <C-]>c :cs find c <C-R>=expand("<cword>")<CR><CR>
+  noremap <C-]>t :cs find t <C-R>=expand("<cword>")<CR><CR>
+  noremap <C-]>e :cs find e <C-R>=expand("<cword>")<CR><CR>
+  noremap <C-]>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
+  noremap <C-]>i :cs find i <C-R>=expand("<cfile>")<CR><CR>
+  noremap <C-]>d :cs find d <C-R>=expand("<cword>")<CR><CR>
 
 
   " Using 'CTRL-\' then a search type
